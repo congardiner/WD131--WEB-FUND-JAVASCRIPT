@@ -1,0 +1,28 @@
+h1 {
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+}
+
+h2 {
+    text-decoration-color: #006eb6;
+    text-align: center;
+}
+
+p {
+    text-align: left;
+}
+
+li {
+    text-align: center;
+}
+
+footer {
+    text-align: center;
+}
+
+img {
+    margin: 0 auto;
+}
+
+
+
