@@ -1,14 +1,17 @@
 // changeTheme funct
 
-const changeTheme = document.getElementById('changeTheme');
+const changeTheme = document.getElementById('change-Theme');
+const mainDiv = document.querySelector('.main');
+const logoImage = document.querySelector('footer img')
+
 
 changeTheme.addEventListener('change', () => {
-    const changeTheme = changeTheme.value;
+    if (changeTheme.value === 'dark') {
+        mainDiv.classList.add('dark-theme');
+        logoImage.src = 'byui-logo_blue.webp';
 
-    if (changeTheme === 'dark') {
-        document.body.classList.add('dark');
-    }  else {
-        document.body.classList.remove('dark');
+    } else {
+        mainDiv.classList.remove('dark-theme');
+        logoImage.src = 'byui-logo_white.webp';
     }
 });
-
