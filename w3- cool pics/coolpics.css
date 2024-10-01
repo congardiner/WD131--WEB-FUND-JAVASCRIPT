@@ -1,7 +1,33 @@
 @import url("https://fonts.googleapis.com/css2?family=Mooli&display=swap");
 
+:root {
+    --primary-color: #52489c;
+    --secondary-color: #59c3c3;
+    --accent-color: #f45b69;
+    --text-dark: #333;
+    --text-light: #ebebeb;
+    --primary-font: Arial, Helvetica,sans-serif;
+    --secondary-font: Mooli, san-serif;
+    }
+
+/* Existing styles... */
+
+@media (min-width: 700px) {
+    main {
+        display: grid;
+        grid-template-columns: 1fr 1fr; /* Two-column layout */
+        grid-gap: 1rem;
+    }
+
+    #menu-button {
+        display: none;
+        /* this will hide my menu button when on other display sizes */
+    }
+}
+
+
 body {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: var(--primary-font);
     font-size: 18px;
     color: black;
 }
