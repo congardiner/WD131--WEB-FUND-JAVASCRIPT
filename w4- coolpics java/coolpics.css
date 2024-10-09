@@ -1,0 +1,105 @@
+@import url("https://fonts.googleapis.com/css2?family=Mooli&display=swap");
+
+:root {
+    --primary-color: #52489c;
+    --secondary-color: #59c3c3;
+    --accent-color: #f45b69;
+    --text-dark: #333;
+    --text-light: #ebebeb;
+    --primary-font: Arial, Helvetica,sans-serif;
+    --secondary-font: Mooli, san-serif;
+    }
+
+/* Existing styles... */
+
+#nav-menu {
+    display: none;
+}
+
+.menu-button {
+    font-size: 30px; /* Size of the hamburger icon */
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: none; /* Hidden by default, shown on small screens */
+}
+
+/* Hide the menu items by default */
+.hide {
+    display: none;
+}
+
+.gallery {
+    display: grid;
+    grid-template: repeat(auto-fit, minmax(200px, 1fr));
+    grid-gap: 1rem;
+}
+
+figure {
+    text-align: center;
+}
+
+@media (min-width: 700px) {
+    .gallery {
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    }
+}
+
+@media (min-width: 700px) {
+    .menu {
+        display: flex; /* Show the menu by default on larger screens */
+    }
+}
+
+
+
+header {
+    background-color: purple;
+    color: white;
+    padding: 1rem;
+}
+
+ul {
+    list-style: none;
+    display: flex;
+    gap: 10px;
+    flex-direction: row;
+    color: white;
+}
+
+ul:li {
+    color: white;
+}
+
+
+body {
+    font-family: var(--primary-font);
+    font-size: 18px;
+    color: black;
+}
+
+a {
+    color: #007bf0;
+    text-decoration: none;
+}
+
+/* submenu declarable for making a hover element, reviewed from last semester */
+a:hover {
+    color: #0056b3;
+}
+
+
+
+footer {
+    background-color: purple;
+    color: #fff;
+    padding: 1rem;
+    text-align: center;
+}
+
+img {
+    max-width: 100%;
+    height: 250px;
+    object-fit: cover;
+    /* this makes it so that the image is cropped to fit within the height and width. */
+}
