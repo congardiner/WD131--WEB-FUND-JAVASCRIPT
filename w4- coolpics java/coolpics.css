@@ -1,105 +1,165 @@
 @import url("https://fonts.googleapis.com/css2?family=Mooli&display=swap");
 
 :root {
-    --primary-color: #52489c;
+    --primary-color: purple;
     --secondary-color: #59c3c3;
     --accent-color: #f45b69;
     --text-dark: #333;
     --text-light: #ebebeb;
-    --primary-font: Arial, Helvetica,sans-serif;
-    --secondary-font: Mooli, san-serif;
-    }
-
-/* Existing styles... */
-
-#nav-menu {
-    display: none;
+    --primary-font: Arial, Helvetica, sans-serif;
+    --secondary-font: Mooli, sans-serif;
 }
-
-.menu-button {
-    font-size: 30px; /* Size of the hamburger icon */
-    background: none;
-    border: none;
-    cursor: pointer;
-    display: none; /* Hidden by default, shown on small screens */
-}
-
-/* Hide the menu items by default */
-.hide {
-    display: none;
-}
-
-.gallery {
-    display: grid;
-    grid-template: repeat(auto-fit, minmax(200px, 1fr));
-    grid-gap: 1rem;
-}
-
-figure {
-    text-align: center;
-}
-
-@media (min-width: 700px) {
-    .gallery {
-        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-    }
-}
-
-@media (min-width: 700px) {
-    .menu {
-        display: flex; /* Show the menu by default on larger screens */
-    }
-}
-
-
-
-header {
-    background-color: purple;
-    color: white;
-    padding: 1rem;
-}
-
-ul {
-    list-style: none;
-    display: flex;
-    gap: 10px;
-    flex-direction: row;
-    color: white;
-}
-
-ul:li {
-    color: white;
-}
-
 
 body {
     font-family: var(--primary-font);
     font-size: 18px;
-    color: black;
+    color: var(--text-dark);
 }
 
-a {
-    color: #007bf0;
+/* Header and Menu Styles */
+header {
+    background-color: var(--primary-color);
+    color: var(--text-light);
+    padding: 1rem;
+    border-radius: 20px;
+    /* this is how you change the border so that you can have rounded corners */
+
+}
+
+.menu-button {
+    font-size: 30px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: none;
+    color: var(--text-light);
+}
+
+.menu ul {
+    list-style: none;
+    display: flex;
+    gap: 10px;
+    padding: 0;
+    margin: 0;
+}
+
+.menu ul li a {
+    color: var(--text-light);
     text-decoration: none;
 }
 
-/* submenu declarable for making a hover element, reviewed from last semester */
-a:hover {
-    color: #0056b3;
+.menu ul li a:hover {
+    color: var(--secondary-color);
+}
+
+/* Gallery Styles */
+/* grid-template columns allows for a min and max and automatically assembles my grid, using 1fr for each consequtive grid element. */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-gap: 1rem;
+    padding: 1rem;
+}
+
+.gallery figure {
+    margin: 0;
+    text-align: center;
+}
+
+.gallery img {
+    max-width: 100%;
+    height: 250px;
+    object-fit: cover;
+    cursor: pointer;
+}
+
+/* Modal Styles */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    position: relative;
+    max-width: 90%;
+    max-height: 90%;
+    overflow: auto;
+}
+
+.modal-content img {
+    max-width: 100%;
+    max-height: 70vh;
+    object-fit: contain;
+}
+
+.modal-content p {
+    margin-top: 10px;
+    text-align: center;
+}
+
+/* This literally just provides the close window option in the right hand side. */
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    background: none;
+    border: none;
+    cursor: pointer;
 }
 
 
+.hide {
+    display: none;
+}
 
+/* Footer Styles */
 footer {
-    background-color: purple;
-    color: #fff;
+    background-color: var(--primary-color);
+    color: var(--text-light);
     padding: 1rem;
     text-align: center;
 }
 
-img {
-    max-width: 100%;
-    height: 250px;
-    object-fit: cover;
-    /* this makes it so that the image is cropped to fit within the height and width. */
+/* Responsive Styles */
+/* smaller media windows, best optimized to fit the grid-template options */
+@media (max-width: 700px) {
+    .menu-button {
+        display: block;
+    }
+
+    .menu ul {
+        flex-direction: column;
+    }
+
+    .menu.hide {
+        display: none;
+    }
+
+    .gallery {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    }
+}
+
+
+/*  media query set for larger screens, typically this is larger than most tablet window sizes. */
+@media (min-width: 701px) {
+    .menu {
+        display: block !important;
+    }
+
+    .gallery {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
 }
