@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript Option</title>
+</head>
+<body>
+
+    <button id="btn">Click Here</button>
+
+    <ul>
+        <li>Hi</li>
+        <li>This</li>
+        <li>Is</li>
+        <li>A</li>
+        <li>Practice</li>
+        <li>Java Web Page</li>
+    </ul>
+
+
+
+    <script>
+
+        const obj = {
+            name: 'Brother Wilden',
+
+            // this is how to declare a function within java
+            getName: () => {
+                return "Brother Wilden by functions"
+            }
+        }
+
+        console.log(obj.getName)
+
+
+        const button = document.getElementById('btn')
+        button.addEventListener('click', handleClick)
+
+
+        function handleClick() {
+            console.log('Click Worked!')
+        }
+
+        for (let i = 0; i < 10; i++) {
+            console.log(i);
+        }
+
+        const list = document.getElementById('list')
+
+        console.log(list.children)
+
+        list.children.foreach((li) => {
+            console.log(li)
+        })
+
+        const item = document.getElementById('item-obj')
+        console.log(item.children)
+
+        for (let i = 0; i > 10; i++) {
+            console.log(i);
+        }
+
+
+
+        // of the elements within java are objects, or created as func, const, or let = temporary variables
+
+
+
+
+    </script>
+    
+</body>
+</html>
