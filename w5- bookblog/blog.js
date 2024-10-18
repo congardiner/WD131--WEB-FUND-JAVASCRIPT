@@ -24,7 +24,81 @@ function handleResize() {
 
 
 
+// I added a function that literally scrolls back to the top of the webpage, super nifty!
 
+
+
+window.onscroll = function() {
+    const backToTopButton = document.getElementById('back-to-top');
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        backToTopButton.style.display = "block";
+    } else {
+        backToTopButton.style.display = "none";
+    }
+};
+
+function scrollToTop() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+}
+
+// Gallery click functionality
+// modal means dialog popup box, which as provided by w3schools, supplements the open window function that was created
+// and created class that allows the user to then hide the modal windows as they are created
+// using an 'X' in the right hand corner with an event handler.
+const galleryImages = document.querySelectorAll('.gallery img');
+const modal = document.createElement('div');
+modal.className = 'modal hide';
+document.body.appendChild(modal);
+
+// Viewer template function
+function viewerTemplate(imageUrl, altText) {
+    return `
+        <div class="modal-content">
+            <img src="${imageUrl}" alt="${altText}">
+            <p>${altText}</p>
+            <button class="close-button">&times;</button>
+        </div>
+    `;
+}
+
+// Open Modal, not sure how src and alt work just yet in hiding modal windows. //
+function openModal(src, alt) {
+    modal.innerHTML = viewerTemplate(src, alt);
+    modal.classList.remove('hide');
+
+    const closeButton = modal.querySelector('.close-button');
+    closeButton.addEventListener('click', closeModal);
+}
+
+function closeModal() {
+    modal.classList.add('hide');
+}
+
+galleryImages.forEach(img => {
+    img.addEventListener('click', () => {
+        openModal(img.src, img.alt);
+    });
+});
+
+// Close modal when clicking outside the image
+modal.addEventListener('click', (e) => {
+    if (e.target === modal) {
+        closeModal();
+    }
+});
+
+// Ensure modal works correctly on different screen sizes
+window.addEventListener('resize', () => {
+    if (!modal.classList.contains('hide')) {
+        const img = modal.querySelector('img');
+        openModal(img.src, img.alt);
+    }
+});
+
+
+
+// this was provided by the assignment directory, not sure if this will be used for these intents or purposes.
 
 const articles = [
 	{

@@ -1,3 +1,321 @@
 /* I will need to update all of my styling elements for color(s), div, nav, and section elements for the image tags. */
 /* Fonts */
 
+:root {
+  --primary-color: #85c1e9;
+  --secondary-color: black;
+  --accent-color: #f45b69;
+  --text-dark: #333;
+  --text-light: #ebebeb;
+  --primary-font: Arial, Helvetica, sans-serif;
+  --secondary-font: sans-serif;
+}
+
+/* Header and Menu Styles */
+header {
+  background-color: var(--primary-color);
+  color: var(--text-light);
+  padding: 1rem;
+  border-radius: 20px;
+  margin-bottom: auto;
+  /* this is how you change the border so that you can have rounded corners */
+}
+
+
+
+.menu {
+  display: flex;
+  align-items:center;
+  gap: 20px;
+}
+
+.menu-button {
+  font-size: 30px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: none;
+  color: var(--text-light);
+}
+
+.menu ul {
+  list-style: none;
+  display: flex;
+  gap: 10px;
+  padding: 0;
+  margin: 0;
+}
+
+.menu ul li a {
+  color: var(--text-light);
+  text-decoration: none;
+}
+
+.menu ul li a:hover {
+  color: var(--secondary-color);
+}
+
+/* Here are the elements for the search container */
+
+.search-container {
+  display: flex;
+  align-items: center;
+  margin-left: auto; /* Push the search bar to the right */
+}
+
+/* This was provided by github co-pilot with the intent of helping me understand how the code works along with how to use it within the search container */
+.search-container input[type="text"] {
+  padding: 5px;
+  margin-right: 5px;
+  border: 1px;
+  border-radius: 3px;
+}
+
+.search-container button {
+  padding: 5px 10px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  background-color: #f8f8f8;
+  cursor: pointer;
+}
+.search-container button:hover {
+  background-color: #e0e0e0;
+}
+
+/* elements that are strictly related to the body tags for readability. */
+
+body {
+  font-family: var(--primary-font);
+  font-size: 18px;
+  color: var(--text-dark);
+}
+
+/* enables scaling for the buttons */
+
+.buttons {
+  display: flex;
+  gap: 10px;
+}
+
+
+/* I added this class to handle a grid of 3 columns, so that I can adjust and display this according to my format. */
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: auto;
+  gap: 20px;
+}
+
+.styled-div {
+  border: 1px solid #ccc;
+  padding: 15px;
+  margin: 20px 0;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+  grid-column: 1 / 5;
+  grid-row: 1 / 2;
+}
+
+/* I learned how to use grid-column and grid-rows in how they span and behave. */
+
+.styled-div-mid {
+  border: 1px solid #ccc;
+  padding: 15px;
+  margin: 20px 0;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+  grid-column: 1 / 5;
+  grid-row: 2 / 4;
+}
+
+
+.styled-small-div {
+  border: 1px solid #ccc;
+  padding: 15px;
+  margin: 20px 0;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+  width: 40%; /* Adjust the width as needed */
+  margin-left: 0; /* Align to the left */
+  grid-column: 1 / 5;
+  grid-row: 5 / 4;
+}
+
+.styled-small-div-img {
+  width: 100%;
+  height: auto;
+  display: block; 
+}
+
+
+
+
+/* I will need to change my grid elements, could change to free-floating as that will allow flexibility within the images */
+
+/* Gallery Styles */
+/* grid-template columns allows for a min and max and automatically assembles my grid, using 1fr for each consequtive grid element. */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-gap: 1rem;
+  padding: 1rem;
+}
+
+.gallery figure {
+  margin: 0;
+  text-align: center;
+}
+
+.gallery img {
+  max-width: 100%;
+  height: 250px;
+  object-fit: cover;
+  cursor: pointer;
+}
+
+.content-grid {
+    display: grid;
+    grid-template-rows: auto auto;
+    gap: 10px;
+}
+
+.resizable-img {
+  width: 100%;
+  height: 300px;
+  max-width: 100%;
+  object-fit: cover;
+}
+
+
+
+
+
+/* Modal Styles */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background-color: white;
+  padding: 20px;
+  border-radius: 5px;
+  position: relative;
+  max-width: 90%;
+  max-height: 90%;
+  overflow: auto;
+}
+
+.modal-content img {
+  max-width: 100%;
+  max-height: 70vh;
+  object-fit: contain;
+}
+
+.modal-content p {
+  margin-top: 10px;
+  text-align: center;
+}
+
+/* This literally just provides the close window option in the right hand side. */
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 24px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.hide {
+  display: none;
+}
+
+/* footer elements were changed and adjusted as I looked into various html and css outlines for ideas of how to layout webpage content */
+
+footer {
+  background-color: var(--primary-color);
+  padding: 20px;
+  border-top: 1px solid #ccc;
+  border-radius: 20px;
+}
+.footer-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+.footer-column {
+  display: flex;
+  flex-direction: column;
+  padding: 0 20px;
+}
+.footer-column h3 {
+  margin-bottom: 10px;
+}
+.footer-column p {
+  margin: 5px 0;
+}
+
+/* This is what adds vertical divider lines in between content */
+.footer-column:not(:last-child) {
+  border-right: 1px solid white;
+}
+
+
+
+/* Added an element for social media icons */
+
+.social-icons {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+/* This is to control the responsive sizing of the icons so that they don't go all wonky */
+.social-icons i {
+  font-size: 1.5em;
+  color: #333;
+}
+
+/* Responsive Styles */
+/* smaller media windows, best optimized to fit the grid-template options */
+@media (max-width: 700px) {
+  .menu-button {
+    display: block;
+  }
+
+  .menu ul {
+    flex-direction: column;
+  }
+
+  .menu.hide {
+    display: none;
+  }
+
+  .gallery {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  }
+}
+
+/*  media query set for larger screens, typically this is larger than most tablet window sizes. */
+@media (min-width: 701px) {
+  .menu {
+    display: block !important;
+  }
+
+  .gallery {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+}

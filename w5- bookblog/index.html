@@ -1,90 +1,194 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Books For Kids</title>
     <meta name="author" content="congard" />
     <link rel="stylesheet" href="blog.css" />
     <script src="blog.js" defer></script>
-</head>
-<body>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- This cloudflare library is a community asset that allows for icon packages to be integrated into a website. -->
+  </head>
+  <body>
     <header>
-        <h1>Books for Kids</h1>
-        <button class="menu-button">☰</button>
-        <nav class="menu hide">
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Archive</a></li>
-                <li><a href="#">Search</a></li>
-            </ul>
+
+      <h1>Books for Kids</h1>
+      <button class="menu-button">☰</button>
+      <nav class="menu hide">
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Archive</a></li>
+          <li><a href="#">Settings</a></li>
+        </ul>
+        <div class="search-container">
+          <label for="search">Search:</label>
+          <input
+            type="text"
+            id="search"
+            name="search"
+            placeholder="Search book reviews..."
+          />
+          <button type="button" onclick="performSearch()">Go</button>
+        </div>
+      </nav>
+
     </header>
 
-    <main>
-        <div>
-            <h1>Welcome to Books for Kids ~ Our Reviews, Your Kids, Lifetime of Learning</h1>
+    <main class="grid-container">
+      <div class="styled-div">
+        <h1>
+          Welcome to Books for Kids ~ Our Reviews, Your Kids, Lifetime of
+          Learning
+        </h1>
+      </div>
+
+  
+
+      <div class="styled-div-mid">
+        <!-- This is for the information on the author portion -->
+        <!-- Will want to add text wrap and ensure that everything is properly wrapped in this -->
+        <h1>The Way of Kings</h1>
+        <p>Author: Brandon Sanderson</p>
+        <p>The Stormlight Archives #1</p>
+        <p>
+          Foreword: Roshar is a world of stone and storms. Uncanny tempests of
+          incredible power sweep across the rocky terrain so frequently that
+          they have shaped ecology and civilization alike. Animals hide in
+          shells, trees pull in branches, and grass retracts into the soilless
+          ground. Cities are built only where the topography offers shelter.
+        </p>
+
+        <p>
+          It has been centuries since the fall of the ten consecrated orders
+          known as the Knights Radiant, but their Shardblades and Shardplate
+          remain: mystical swords and suits of armor that transform ordinary men
+          into near-invincible warriors. Men trade kingdoms for Shardblades.
+          Wars were fought for them, and won by them.
+        </p>
+
+        <p>
+          One such war rages on a ruined landscape called the Shattered Plains.
+          There, Kaladin, who traded his medical apprenticeship for a spear to
+          protect his little brother, has been reduced to slavery. In a war that
+          makes no sense, where ten armies fight separately against a single
+          foe, he struggles to save his men and to fathom the leaders who
+          consider them expendable.
+        </p>
+
+        <p>
+          Brightlord Dalinar Kholin commands one of those other armies. Like his
+          brother, the late king, he is fascinated by an ancient text called The
+          Way of Kings. Troubled by over-powering visions of ancient times and
+          the Knights Radiant, he has begun to doubt his own sanity.
+        </p>
+
+        <p>
+          Across the ocean, an untried young woman named Shallan seeks to train
+          under an eminent scholar and notorious heretic, Dalinar's niece,
+          Jasnah. Though she genuinely loves learning, Shallan's motives are
+          less than pure. As she plans a daring theft, her research for Jasnah
+          hints at secrets of the Knights Radiant and the true cause of the war.
+        </p>
+
+        <p>
+          The result of over ten years of planning, writing, and world-building,
+          The Way of Kings is but the opening movement of the Stormlight
+          Archive, a bold masterpiece in the making.
+        </p>
+
+        <p>Speak again the ancient oaths:</p>
+
+        <p>
+          Life before death.<br />
+          Strength before weakness.<br />
+          Journey before Destination.
+        </p>
+
+        <p>and return to men the Shards they once bore.</p>
+
+        <p>The Knights Radiant must stand again.</p>
+
+        <p>1007 pages, Hardcover</p>
+
+        <p>First published August 31, 2010</p>
+
+        <section class="gallery">
             <figure>
-                <img src="pics/wayofkings.jpg" alt="This novel entitled the 'Way of Kings' is authored by Brandon Sanderson, ">
+              <img
+                src="pics/wayofkings.jpg"
+                alt="This novel entitled the 'Way of Kings' is authored by Brandon Sanderson, it is the first book in the series the Stormlight Archives, and is apart of the multi-universe of the 'Brandon Sanderson Verse' of his collection within the series."
+              />
             </figure>
+        </section>
+
+        <div class="buttons">
             <button>Review</button>
             <button>Purchase</button>
         </div>
 
-        <!-- I will want to add a search bar function with the <label> tag to ensure that someone could query the website. -->
+      </div>
 
-        <div>
-<!-- This is for the information on the author portion -->
- <!-- Will want to add text wrap and ensure that everything is properly wrapped in this -->
-<h1>Author: Brandon Sanderson</h1>
-<p>The Stormlight Archives #1</p>
-<p>Foreword: Roshar is a world of stone and storms. Uncanny tempests of incredible power sweep across the rocky terrain so frequently that they have shaped ecology and civilization alike. Animals hide in shells, trees pull in branches, and grass retracts into the soilless ground. Cities are built only where the topography offers shelter.</p>
+      <div class="styled-small-div">
+        <!-- This is for the author img tag and two buttons -->
+        <section class="gallery">
+          <figure>
+            <img
+                src="pics/brandon_sanderson_studio_shot.jpg"
+                alt="This is a picture of Brandon Sanderson, provided by GoodReads, offering an interpersonal viewpoint of the author. Here is a bio from his website: Hello! My name's Brandon. I write science fiction and fantasy stories that focus on complex characters and innovative settings. I'm glad you stopped by.
 
-<p>It has been centuries since the fall of the ten consecrated orders known as the Knights Radiant, but their Shardblades and Shardplate remain: mystical swords and suits of armor that transform ordinary men into near-invincible warriors. Men trade kingdoms for Shardblades. Wars were fought for them, and won by them.</p>
+                I've written a lot over the years. It can be a little daunting to get into my work, but it doesn't have to be. Most of my series can be read independently of one another, and although many of them are connected behind the scenes, references to these things are generally easter eggs or other small-scale connections.
 
-<p>One such war rages on a ruined landscape called the Shattered Plains. There, Kaladin, who traded his medical apprenticeship for a spear to protect his little brother, has been reduced to slavery. In a war that makes no sense, where ten armies fight separately against a single foe, he struggles to save his men and to fathom the leaders who consider them expendable.</p>
+                I thought that here I'd pitch to you a few books—each a good place to start—if you want to dive in. Each book or series I write is usually trying something slightly different, so they each tend to have a unique vibe. The best place for you to start, then, is generally with something that matches your reading tastes. Let me give you a few options. You can click the title of each one to read sample chapters!
 
-<p>Brightlord Dalinar Kholin commands one of those other armies. Like his brother, the late king, he is fascinated by an ancient text called The Way of Kings. Troubled by over-powering visions of ancient times and the Knights Radiant, he has begun to doubt his own sanity.</p>
+                All of these works, save Skyward, take place in the same universe called the Cosmere. The connections are quite ephemeral in these pieces, but watch for a character named Hoid (a.k.a. Wit). He is relevant to each of them in some way or another. Watching for him and trying to piece together his motives is one of the mysteries of the Cosmere.
 
-<p>Across the ocean, an untried young woman named Shallan seeks to train under an eminent scholar and notorious heretic, Dalinar's niece, Jasnah. Though she genuinely loves learning, Shallan's motives are less than pure. As she plans a daring theft, her research for Jasnah hints at secrets of the Knights Radiant and the true cause of the war.</p>
-
-<p>The result of over ten years of planning, writing, and world-building, The Way of Kings is but the opening movement of the Stormlight Archive, a bold masterpiece in the making.</p>
-
-<p>Speak again the ancient oaths:</p>
-
-<p>Life before death.<br>
-Strength before weakness.<br>
-Journey before Destination.</p>
-
-<p>and return to men the Shards they once bore.</p>
-
-<p>The Knights Radiant must stand again.</p>
-
-<p>1007 pages, Hardcover</p>
-
-<p>First published August 31, 2010</p>
-        </div>
-
-        <div>
-<!-- This is for the author img tag and two buttons -->
- <figure>
-    <img src="" alt="This is a picture of Brandon Sanderson, the img itself was provided by GoodReads, with the intent of offering an interpersonal viewpoint for the author in representing him within this capacity.">
- </figure>
-
- <button>Author</button>
- <button>Reviews</button>
-        </div>
-
-
+                Thanks again for looking into my works!"
+            />
+          </figure>
+        </section>
+      <div class="buttons">
+        <button>Author</button>
+        <button>Reviews</button>
+      </div>
     </main>
-</body>
+  
 
-<footer>Books for Kids ©2024 
-    <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Privacy Policy</a></li>
-        <li><a href="#">Terms of Service</a></li>
-        <li><a href="#">Contact Us</a></li>
-    </ul>
+  
+
+  <footer>
+    <div class="footer-container">
+        <div class="footer-column">
+            <h3>About Us</h3>
+            <p>Books for Kids is a blog dedicated to providing reviews and recommendations for children's books. Established in 2024, this is simply just an example website that has been created for the purposes of learning and enhancing my understanding of Javascript Assets, Functions, overall syntax, and its interactions between a developer and front-end UX. </p>
+        </div>
+        <div class="footer-column">
+            <h3>Contact</h3>
+            <p>Email: info@booksforkids.com</p>
+            <p>Phone: (123) 456-7890</p>
+        </div>
+        <div class="footer-column">
+          <h3>Follow Us</h3>
+          <div class="social-icons">
+              <i class="fab fa-facebook-f"></i>
+              <p>Facebook</p>
+          </div>
+          <div class="social-icons">
+              <i class="fab fa-twitter"></i>
+              <p>Twitter</p>
+          </div>
+          <div class="social-icons">
+              <i class="fab fa-instagram"></i>
+              <p>Instagram</p>
+          </div>
+      </div>
+    </div>
+    <p style="text-align: center; margin-top: 20px;">Books for Kids ©2024</p>
 </footer>
+
+<!-- This button assists with scrolling back to the top -->
+<button id="back-to-top" onclick="scrollToTop()">Back to Top</button>
+
+</body>
 </html>
