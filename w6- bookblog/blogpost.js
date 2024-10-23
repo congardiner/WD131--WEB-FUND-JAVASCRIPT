@@ -98,51 +98,6 @@ window.addEventListener('resize', () => {
 
 
 
-// This was example code provided for showcasing how to create a filter nav with the appropiate buttons
-
-document.addEventListener("DOMContentLoaded", function() {
-    const articlesContainer = document.getElementById("articles-container");
-  
-    function renderArticles(filteredArticles) {
-      articlesContainer.innerHTML = ""; // Clear existing articles
-      filteredArticles.forEach(article => {
-        const articleElement = document.createElement("article");
-        articleElement.classList.add("article");
-  
-        const titleElement = document.createElement("h2");
-        titleElement.textContent = article.title;
-  
-        const authorElement = document.createElement("p");
-        authorElement.textContent = `By ${article.author}`;
-  
-        const dateElement = document.createElement("p");
-        dateElement.textContent = `Published on ${article.date}`;
-  
-        const contentElement = document.createElement("p");
-        contentElement.textContent = article.content;
-  
-        articleElement.appendChild(titleElement);
-        articleElement.appendChild(authorElement);
-        articleElement.appendChild(dateElement);
-        articleElement.appendChild(contentElement);
-  
-        articlesContainer.appendChild(articleElement);
-      });
-    }
-  
-    renderArticles(articles); // Initial render
-  
-    document.getElementById("filter-button").addEventListener("click", function() {
-      const authorFilter = document.getElementById("author-filter").value.toLowerCase();
-      const filteredArticles = articles.filter(article => article.author.toLowerCase().includes(authorFilter));
-      renderArticles(filteredArticles);
-    });
-  });
-
-  
-
-
-
 // this was provided by the assignment directory, not sure if this will be used for these intents or purposes.
 
 const articles = [

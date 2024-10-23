@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Books For Kids</title>
+    <meta name="author" content="congard" />
+    <link rel="stylesheet" href="bookblog.css" />
+    <script src="bookblog.js" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- This cloudflare library is a community asset that allows for icon packages to be integrated into a website. -->
+  </head>
+  <body>
+    <header>
+
+        <h1>Books for Kids</h1>
+        <button class="menu-button">☰</button>
+        <nav class="menu hide">
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Archive</a></li>
+            <li><a href="#">Settings</a></li>
+          </ul>
+          <div class="search-container">
+            <label for="search">Search:</label>
+            <input
+              type="text"
+              id="search"
+              name="search"
+              placeholder="Search book reviews..."
+            />
+            <button type="button" onclick="performSearch()">Go</button>
+          </div>
+        </nav>
+  
+    </header>
+
+
+      <div class="content-wrapper">
+        <main class="main-content">
+            <div class="book-entry">
+                <div class="book-metadata">
+                    <div class="book-date">Published August 31, 2010</div>
+                    <div class="book-age">13+</div>
+                    <div class="book-genre">Fantasy</div>
+                    <div class="book-rating">★★★★★</div>
+                </div>
+                <div class="book-content">
+                    <h2><a href="#" class="book-title">The Way of Kings - The Stormlight Archives #1</a></h2>
+                    <img src="pics/wayofkings.jpg" alt="The Cover for the Way of Kings, published and authored by Brandon Sanderson" class="book-image">
+                    <p class="book-description">Foreword: Roshar is a world of stone and storms. Uncanny tempests of
+                        incredible power sweep across the rocky terrain so frequently that
+                        they have shaped ecology and civilization alike. Animals hide in
+                        shells, trees pull in branches, and grass retracts into the soilless
+                        ground. Cities are built only where the topography offers shelter.<a href="#">Read More...</a></p>
+                </div>
+            </div>
+
+
+            <div class="book-entry">
+                <div class="book-metadata">
+                    <div class="book-date">December 12, 2021</div>
+                    <div class="book-age">12-16</div>
+                    <div class="book-genre">Fantasy</div>
+                    <div class="book-rating">★★★★</div>
+                </div>
+                <div class="book-content">
+                    <h2><a href="#" class="book-title">Words of Radiance - The Stormlight Archives #2</a></h2>
+                    <img src="pics/words_of_radiance.jpg" alt="Book Cover for the Second Book in the Stormlight Archives, the words of radiance, published and authored by Brandon Sanderson" class="book-image">
+                    <!-- <p class="book-description"> Book Description to come <a href="#">Read More...</a></p> -->
+                </div>
+            </div>
+        </main>
+
+
+        <aside class="sidebar">
+            <div class="filter-section">
+                <h3>Age Range</h3>
+                <div class="filter-options">
+                    <label class="filter-option">
+                        <input type="checkbox" name="age" value="0-5"> 0-5 years
+                    </label>
+                    <label class="filter-option">
+                        <input type="checkbox" name="age" value="6-8"> 6-8 years
+                    </label>
+                    <label class="filter-option">
+                        <input type="checkbox" name="age" value="9-12"> 9-12 years
+                    </label>
+                    <label class="filter-option">
+                        <input type="checkbox" name="age" value="13+"> 13+ years
+                    </label>
+                </div>
+            </div>
+
+
+            <div class="filter-section">
+                <h3>Genre</h3>
+                <div class="filter-options">
+                    <label class="filter-option">
+                        <input type="checkbox" name="genre" value="fantasy"> Fantasy
+                    </label>
+                    <label class="filter-option">
+                        <input type="checkbox" name="genre" value="adventure"> Adventure
+                    </label>
+                    <label class="filter-option">
+                        <input type="checkbox" name="genre" value="mystery"> Mystery
+                    </label>
+                    <label class="filter-option">
+                        <input type="checkbox" name="genre" value="scifi"> Science Fiction
+                    </label>
+                    <label class="filter-option">
+                        <input type="checkbox" name="genre" value="non-fiction"> Non Fiction
+                    </label>
+                </div>
+            </div>
+
+
+            <div class="filter-section">
+                <h3>Rating</h3>
+                <div class="filter-options">
+                    <label class="filter-option">
+                        <input type="checkbox" name="rating" value="5"> ★★★★★
+                    </label>
+                    <label class="filter-option">
+                        <input type="checkbox" name="rating" value="4"> ★★★★
+                    </label>
+                    <label class="filter-option">
+                        <input type="checkbox" name="rating" value="3"> ★★★
+                    </label>
+                    <label class="filter-option">
+                        <input type="checkbox" name="rating" value="2"> ★★
+                    </label>
+                    <label class="filter-option">
+                        <input type="checkbox" name="rating" value="1"> ★
+                    </label>
+                </div>
+            </div>
+        </aside>
+    </div>
+
+
+
+        <footer>
+            <div class="footer-container">
+                <div class="footer-column">
+                    <h3>About Us</h3>
+                    <p>Books for Kids is a blog dedicated to providing reviews and recommendations for children's books. Established in 2024, this is simply just an example website that has been created for the purposes of learning and enhancing my understanding of Javascript Assets, Functions, overall syntax, and its interactions between a developer and front-end UX. </p>
+                </div>
+                <div class="footer-column">
+                    <h3>Contact</h3>
+                    <p>Email: info@booksforkids.com</p>
+                    <p>Phone: (123) 456-7890</p>
+                </div>
+                <div class="footer-column">
+                  <h3>Follow Us</h3>
+                  <div class="social-icons">
+                      <i class="fab fa-facebook-f"></i>
+                      <p>Facebook</p>
+                  </div>
+                  <div class="social-icons">
+                      <i class="fab fa-twitter"></i>
+                      <p>Twitter</p>
+                  </div>
+                  <div class="social-icons">
+                      <i class="fab fa-instagram"></i>
+                      <p>Instagram</p>
+                  </div>
+              </div>
+            </div>
+            <p style="text-align: center; margin-top: 20px;">Books for Kids ©2024</p>
+        </footer>
+        
+        <!-- This button assists with scrolling back to the top -->
+        <button id="back-to-top" onclick="scrollToTop()">Back to Top</button>
+        
+        </body>
+        </html>

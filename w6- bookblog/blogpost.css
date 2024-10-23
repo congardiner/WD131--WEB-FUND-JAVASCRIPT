@@ -1,4 +1,4 @@
-/* I will need to update all of my styling elements for color(s), div, nav, and section elements for the image tags. */
+/* * I will need to update all of my styling elements for color(s), div, nav, and section elements for the image tags. */ */
 /* Fonts */
 
 :root {
@@ -88,42 +88,6 @@ body {
   font-family: var(--primary-font);
   font-size: 18px;
   color: var(--text-dark);
-}
-
-/* This is for the filter that will be displayed on the right hand side of the screen */
-
-.filter-container {
-  background-color: #f9f9f9;
-  padding: 20px;
-  border-radius: 5px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  height: fit-content;
-}
-
-.filter-container h2 {
-  margin-top: 0;
-}
-
-.filter-container input {
-  width: 100%;
-  padding: 10px;
-  margin-bottom: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-}
-
-.filter-container button {
-  width: 100%;
-  padding: 10px;
-  background-color: #4CAF50;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-.filter-container button:hover {
-  background-color: white;
 }
 
 /* enables scaling for the buttons */
