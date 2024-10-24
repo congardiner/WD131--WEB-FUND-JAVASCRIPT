@@ -86,7 +86,7 @@ body {
 header {
     text-align: center;
     padding: 20px 0;
-    border-bottom: 1px solid #ddd;
+    border-bottom: 1px solid black;
     margin-bottom: 40px;
 }
 
@@ -215,7 +215,7 @@ nav a {
 footer {
     background-color: var(--primary-color);
     padding: 20px;
-    border-top: 1px solid #ccc;
+    border-top: 1px solid black;
     border-radius: 20px;
   }
   .footer-container {
@@ -237,10 +237,10 @@ footer {
   
   /* This is what adds vertical divider lines in between content */
   .footer-column:not(:last-child) {
-    border-right: 1px solid white;
+    border-right: 1px solid black;
   }
 
-  
+
 
 @media (max-width: 968px) {
     .content-wrapper {
