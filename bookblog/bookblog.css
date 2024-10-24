@@ -37,12 +37,11 @@
   }
   
   .menu ul li a {
-    color: var(--text-light);
     text-decoration: none;
   }
   
   .menu ul li a:hover {
-    color: var(--secondary-color);
+    color: grey;
   }
   
   /* Here are the elements for the search container */
@@ -210,13 +209,15 @@ nav a {
 }
 
 
-/* Reupdated my footer as I transferred assets in the merger for my footer and container assets for my favicons for the website itself. */
+/* Re-updated my footer as I transferred assets in the merger for my footer and container assets for my favicons for the website itself. */
 
 footer {
-    background-color: var(--primary-color);
+    background-color: #D5D3D0;
     padding: 20px;
-    border-top: 1px solid black;
+    border-top: 1px solid white;
     border-radius: 20px;
+    color: black;
+    /* This is how I would make rounded corners */
   }
   .footer-container {
     display: grid;
