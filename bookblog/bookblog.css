@@ -41,7 +41,7 @@
   }
   
   .menu ul li a:hover {
-    color: grey;
+    color: #8B1A1A;
   }
   
   /* Here are the elements for the search container */
@@ -87,6 +87,7 @@ header {
     padding: 20px 0;
     border-bottom: 1px solid black;
     margin-bottom: 40px;
+    font-family: "Oswald", sans-serif;
 }
 
 header h1 {
@@ -168,6 +169,9 @@ nav a {
     max-width: 200px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     margin-bottom: 15px;
+    margin: 0 auto;
+    display: block;
+    grid-column: 1;
 }
 
 .book-description {
@@ -212,7 +216,7 @@ nav a {
 /* Re-updated my footer as I transferred assets in the merger for my footer and container assets for my favicons for the website itself. */
 
 footer {
-    background-color: #D5D3D0;
+    background-color: #F2F2F2;
     padding: 20px;
     border-top: 1px solid white;
     border-radius: 20px;
