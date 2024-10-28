@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Practice</title>
+</head>
+<body>
+    <form id="form">
+        <label for="form">Welcome:</label>
+        <input type="text" id="hello" name="hello"/>
+
+    </form>
+    <p id="contents"></p>
+
+    <script>
+        const form = document.getElementsById('form');
+        form.addEventListener("submit", (event) => {
+            event.preventDefault();
+            // stops the browser from refreshing
+            console.log(event);
+
+            const formElement = event.target;
+            console.log(formElement);
+            console.log(formElement.value);
+        });
+    </script>
+    
+</body>
+</html>
