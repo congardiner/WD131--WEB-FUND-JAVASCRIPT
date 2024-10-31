@@ -9,59 +9,78 @@
     <link rel="icon" type="image/png" sizes="32x32" href="favicon_io/favicon-32x32.png">
     <!-- Created and added my link to my favicon that is displaying in the browser now -->
 </head>
-<body>
+<header><h1 class="header">Creepy Credit Card Checkout</h1></header>
+<main>
 
-    <header><h1>Checkout</h1></header>
-    <main>
+  <div id="card-success" class="hidden">
+    <i class="fa fa-check"></i>
+    <p>Payment Successful!</p>
+  </div>
+  <div id="form-errors" class="hidden">
+    <i class="fa fa-exclamation-triangle"></i>
+    <p id="card-error">Card error</p>
+  </div>
+  <div id="form-container">
+  
+    <div id="card-front">
+      <div id="shadow"></div>
+      <div id="image-container">
+        <span id="item">Item: <strong>Mars Property</strong></span>
+        <span id="amount">Paying: <strong>$600,000</strong></span>
+        <span id="card-image">
+        
+          </span>
+      </div>
+      <!--- end card image container --->
+  
+      <label for="card-number">
+          Card Number
+        </label>
+      <input type="text" id="card-number" placeholder="1234 5678 9101 1112" length="16">
+      <div id="cardholder-container">
+        <label for="card-holder">Card Holder
+        </label>
+        <input type="text" id="card-holder" placeholder="e.g. John Doe" />
+      </div>
+      <!--- end card holder container --->
+      <div id="exp-container">
+        <label for="card-exp">
+            Expiration
+          </label>
+        <input id="card-month" type="text" placeholder="MM" length="2">
+        <input id="card-year" type="text" placeholder="YY" length="2">
+      </div>
+          <div id="cvc-container">
+        <label for="card-cvc"> CVC/CVV</label>
+        <input id="card-cvc" placeholder="XXX-X" type="text" min-length="3" max-length="4">
+        <p>Last 3 or 4 digits</p>
+      </div>
+      <!--- end CVC container --->
+      <!--- end exp container --->
+    </div>
+    <!--- end card front --->
+    <div id="card-back">
+      <div id="card-stripe">
+      </div>
+  
+    </div>
+    <!--- end card back --->
+    <input type="text" id="card-token" />
+    <button type="button" id="card-btn">Submit</button>
+  
+  </div>
 
-      <section class="errors"></section>
-      <form id="checkoutForm" action="completed.html"></form>
 
-      <form id="checkoutForm" action="completed.html">
-        <label for="fullName">Full Name:</label>
-        <input type="text" id="fullName" name="fullName" required />
-      
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required />
-      
-        <label for="address">Address:</label>
-        <textarea id="address" name="address" rows="4" required></textarea>
-      
-        <label for="paymentMethod">Payment Method:</label>
-        <select id="paymentMethod" name="paymentMethod" required>
-          <option value="">Select Payment Method</option>
-          <option value="creditCard">Credit Card</option>
-          <option value="paypal">PayPal</option>
-        </select>
-      
-        <!-- Container for credit card details -->
-        <p id="creditCardNumberContainer" class="hide">
-          <label for="creditCardNumber">Credit Card Number:</label>
-          <input
-            type="text"
-            id="creditCardNumber"
-            name="creditCardNumber"
-            pattern="[0-9]{16}"
-            placeholder="Enter 16 digits"
-            required
-          />
-        </p>
-      
-        <!-- Container for PayPal details -->
-        <p id="paypalUsernameContainer" class="hide">
-          <label for="paypalUsername">PayPal Username:</label>
-          <input
-            type="text"
-            id="paypalUsername"
-            name="paypalUsername"
-            placeholder="Enter PayPal username"
-            required
-          />
-        </p>
-      
-        <button type="submit">Place Order</button>
-      </form>
 
-    
-</body>
+
+
+
+
+
+
+
+  
+</main>
+
+<footer class="footer"> Creepy Credit Card Checkout INC ~ Not a Real Company 😁</footer>
 </html>
