@@ -65,7 +65,7 @@ body {
 #card-front,
 #card-back {
   position: absolute;
-  background-color: #498ee4;
+  background-color: #ED9A37;
   width: 390px;
   height: 250px;
   border-radius: 6px;
@@ -201,12 +201,12 @@ body {
 input {
   border: none;
   outline: none;
-  background-color: #5a9def;
+  background-color: whitesmoke;
   height: 30px;
   line-height: 30px;
   padding: 0 10px;
   margin: 0 0 25px;
-  color: white;
+  color: black;
   font-size: 10px;
   box-sizing: border-box;
   border-radius: 4px;
@@ -215,7 +215,7 @@ input {
 }
 
 input::-webkit-input-placeholder {
-  color: #fff;
+  color: black;
   opacity: 0.7;
   font-family: lato, 'helvetica-light', 'sans-serif' 1px;
   font-weight: 300;
@@ -224,7 +224,7 @@ input::-webkit-input-placeholder {
 }
 
 input:-moz-placeholder {
-  color: #fff;
+  color: black;
   opacity: 0.7;
   font-family: lato, 'helvetica-light', 'sans-serif' 1px;
   font-weight: 300;
@@ -233,7 +233,7 @@ input:-moz-placeholder {
 }
 
 input::-moz-placeholder {
-  color: #fff;
+  color: black;
   opacity: 0.7;
   font-family: lato, 'helvetica-light', 'sans-serif' 1px;
   font-weight: 300;
@@ -242,7 +242,7 @@ input::-moz-placeholder {
 }
 
 input:-ms-input-placeholder {
-  color: #fff;
+  color: black;
   opacity: 0.7;
   font-family: lato, 'helvetica-light', 'sans-serif';
   font-weight: 300;
