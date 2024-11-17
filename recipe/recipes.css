@@ -1,0 +1,164 @@
+/* Base styles (mobile-first) */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    padding: 20px;
+  }
+
+  /* Logo styles */
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+  
+  .logo img {
+    width: 40px;  /* Reduced size for logo icon */
+    height: 40px;
+    margin-right: 10px;
+  }
+  
+  /* Search container styles */
+  .search-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px auto;
+    max-width: 600px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    overflow: hidden;
+  }
+  
+  .search-input {
+    flex: 1;
+    padding: 10px 15px;
+    border: none;
+    font-size: 16px;
+  }
+  
+  .search-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 15px;
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .search-button img {
+    width: 20px;  /* Reduced size for search icon */
+    height: 20px;
+  }
+
+  
+  
+  /* Recipe card base styles (mobile) */
+  .recipe-card {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 20px;
+    max-width: 100%;
+  }
+  
+  .recipe-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+  }
+  
+  .recipe-content {
+    padding: 20px;
+  }
+  
+  /* Footer base styles (mobile) */
+  footer {
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid #eee;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+  
+  .social {
+    display: flex;
+    gap: 15px;
+  }
+  
+  /* Medium screens (tablets) */
+  @media screen and (min-width: 600px) {
+    .recipe-card {
+      flex-direction: row;
+    }
+    
+    .recipe-image {
+      width: 300px;
+      height: auto;
+    }
+    
+    footer {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+    
+    .search-container {
+      max-width: 80%;
+      margin: 20px auto;
+    }
+  }
+  
+  /* Large screens (desktop) */
+  @media screen and (min-width: 960px) {
+    body {
+      max-width: 960px;
+      margin: 0 auto;
+    }
+    
+    .recipe-card {
+      margin: 30px auto;
+    }
+    
+    .recipe-content {
+      padding: 30px;
+    }
+    
+    .search-container {
+      max-width: 600px;
+    }
+    
+    /* Prevent excessive stretching */
+    .recipe-image {
+      width: 400px;
+    }
+    
+    /* Larger typography for desktop */
+    .recipe-title {
+      font-size: 28px;
+    }
+    
+    .recipe-description {
+      font-size: 16px;
+      line-height: 1.8;
+    }
+  }
+  
+  /* Optional: Extra large screens */
+  @media screen and (min-width: 1200px) {
+    body {
+      max-width: 960px; /* Keep content width capped */
+      padding: 40px;
+    }
+  }
