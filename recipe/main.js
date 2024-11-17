@@ -1,12 +1,12 @@
-import recipes from './recipes.mjs';
+import recipes from './recipe.mjs';
 
 document.addEventListener("DOMContentLoaded", function() {
   const recipesContainer = document.querySelector('.recipes-container');
 
+  // func I created for expressing an instance of an object, in this case an recipe of recipes (as there are many objs within the mjs array.)
   for (const recipe of recipes) {
     const recipeCard = document.createElement('div');
     recipeCard.classList.add('recipe-card');
-
 
 
     const recipeImage = document.createElement('img');
@@ -14,19 +14,17 @@ document.addEventListener("DOMContentLoaded", function() {
     recipeImage.alt = recipe.name;
 
 
-
     const recipeContent = document.createElement('div');
     recipeContent.classList.add('recipe-content');
-
 
 
     const recipeTag = document.createElement('span');
     recipeTag.classList.add('tag');
     recipeTag.textContent = recipe.tags.join(', ');
 
+
     const recipeTitle = document.createElement('h2');
     recipeTitle.textContent = recipe.name;
-
 
 
     const recipeDescription = document.createElement('p');
