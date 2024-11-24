@@ -55,5 +55,6 @@ document.addEventListener("DOMContentLoaded", function() {
     recipeCard.appendChild(recipeContent);
 
     recipesContainer.appendChild(recipeCard);
+    // This append child is not working?
   }
 });

@@ -1,164 +1,248 @@
 /* Base styles (mobile-first) */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    padding: 20px;
-  }
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-  /* Logo styles */
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  padding: 20px;
+}
+
+/* Logo styles */
 .logo {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 20px;
-  }
-  
-  .logo img {
-    width: 40px;  /* Reduced size for logo icon */
-    height: 40px;
-    margin-right: 10px;
-  }
-  
-  /* Search container styles */
-  .search-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 20px auto;
-    max-width: 600px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    overflow: hidden;
-  }
-  
-  .search-input {
-    flex: 1;
-    padding: 10px 15px;
-    border: none;
-    font-size: 16px;
-  }
-  
-  .search-button {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 8px 15px;
-    background: none;
-    border: none;
-    cursor: pointer;
-  }
-  
-  .search-button img {
-    width: 20px;  /* Reduced size for search icon */
-    height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  /* width: 35%; */
+}
+
+.logo img {
+  width: 40px; /* Reduced size for logo icon */
+  height: 40px;
+  margin-right: 10px;
+}
+
+/* Search container styles */
+.search-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 20px auto;
+  max-width: 600px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.search-input {
+  flex: 1;
+  padding: 10px 15px;
+  border: none;
+  font-size: 16px;
+}
+
+.search-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 15px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.search-button img {
+  width: 20px; /* Reduced size for search icon */
+  height: 20px;
+}
+
+.recipes-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px; /* Space between recipe cards */
+  justify-content: center; /* Center the recipe cards */
+}
+
+/* Recipe card base styles (mobile) */
+.recipe-card {
+  background: white;                                   
+  border-radius: 12px;                                  
+  overflow: hidden;                                     
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* New: add depth */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* New: smooth hover */
+  display: flex;
+  flex-direction: column;                               
+  height: 100%;                                   
+  margin: 20px;    
+}
+
+.recipe-card:hover {                                    
+  transform: translateY(-5px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.recipe-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.recipe-content {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;                              
+  flex-grow: 1;                                        
+}
+
+/* Recipe title */
+.recipe-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin: 0;
+}
+
+/* Recipe description */
+.recipe-description {
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+
+.rating {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+
+
+/* It all comes down to my footer, it is too small and doesn't appropriately encapsulate my content */
+/* Edit note to track my progress in my revision process so that I don't forget. */
+/* Footer base styles (mobile) */
+footer {
+  margin-top: 40px;
+  padding: 40px 20px; /* Increased padding */
+  border-top: 2px solid #ddd; /* Slightly bolder border for visibility */
+  background-color: #f9f9f9; /* Subtle background color for differentiation */
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.footer-content {
+  max-width: 1200px;
+  width: 100%;
+}
+
+.social {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 20%;
+  /* width: 8%;  */
+  gap: 10px;
+}
+
+.social a {
+  display: inline-block;
+  width: 40px; /* Larger clickable area */
+  height: 40px;
+  background-color: white; /* Placeholder color */
+  border-radius: 50%; /* Circular icons */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  color: #333; /* Icon color */
+  font-size: 18px; /* Icon size */
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.social a:hover {
+  background-color: #555; /* Darker background on hover */
+  color: white;
+  transform: scale(1.1); /* Slight zoom effect */
+}
+
+.social img {
+  width: 20px;
+  height: 20px;
+}
+
+
+
+/* Medium screens (tablets) */
+@media screen and (min-width: 600px) {
+  .recipe-card {
+    flex-direction: row;
   }
 
-  
-  
-  /* Recipe card base styles (mobile) */
-  .recipe-card {
-    display: flex;
-    flex-direction: column;
-    border: 1px solid #eee;
-    border-radius: 8px;
-    overflow: hidden;
-    margin-bottom: 20px;
-    max-width: 100%;
-  }
-  
   .recipe-image {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
+    width: 300px;
+    height: auto;
   }
-  
+
+   footer {
+    flex-direction: row;
+    justify-content: space-between;
+   } 
+
+   .footer-content {
+    flex-direction: row;
+    justify-content: space-between;
+   }
+
+  .search-container {
+    max-width: 80%;
+    margin: 20px auto;
+  }
+}
+
+/* Large screens (desktop) */
+@media screen and (min-width: 960px) {
+  body {
+    max-width: 960px;
+    margin: 0 auto;
+  }
+
+  .recipe-card {
+    margin: 30px auto;
+  }
+
   .recipe-content {
-    padding: 20px;
+    padding: 30px;
   }
-  
-  /* Footer base styles (mobile) */
-  footer {
-    margin-top: 40px;
-    padding-top: 20px;
-    border-top: 1px solid #eee;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
+
+  .search-container {
+    max-width: 600px;
   }
-  
-  .social {
-    display: flex;
-    gap: 15px;
+/* 
+  /* Prevent excessive stretching */
+  .recipe-image {
+    width: 400px;
   }
-  
-  /* Medium screens (tablets) */
-  @media screen and (min-width: 600px) {
-    .recipe-card {
-      flex-direction: row;
-    }
-    
-    .recipe-image {
-      width: 300px;
-      height: auto;
-    }
-    
-    footer {
-      flex-direction: row;
-      justify-content: space-between;
-    }
-    
-    .search-container {
-      max-width: 80%;
-      margin: 20px auto;
-    }
+
+  /* Larger typography for desktop */
+  .recipe-title {
+    font-size: 28px;
   }
-  
-  /* Large screens (desktop) */
-  @media screen and (min-width: 960px) {
-    body {
-      max-width: 960px;
-      margin: 0 auto;
-    }
-    
-    .recipe-card {
-      margin: 30px auto;
-    }
-    
-    .recipe-content {
-      padding: 30px;
-    }
-    
-    .search-container {
-      max-width: 600px;
-    }
-    
-    /* Prevent excessive stretching */
-    .recipe-image {
-      width: 400px;
-    }
-    
-    /* Larger typography for desktop */
-    .recipe-title {
-      font-size: 28px;
-    }
-    
-    .recipe-description {
-      font-size: 16px;
-      line-height: 1.8;
-    }
+
+  .recipe-description {
+    font-size: 16px;
+    line-height: 1.8;
   }
-  
-  /* Optional: Extra large screens */
-  @media screen and (min-width: 1200px) {
-    body {
-      max-width: 960px; /* Keep content width capped */
-      padding: 40px;
-    }
+}
+
+/* Optional: Extra large screens */
+@media screen and (min-width: 1200px) {
+  body {
+    max-width: 960px; /* Keep content width capped */
+    padding: 40px;
   }
+} 
