@@ -1,4 +1,4 @@
-/* Base styles (mobile-first) */
+/* * applies to all */
 * {
   margin: 0;
   padding: 0;
@@ -11,22 +11,20 @@ body {
   padding: 20px;
 }
 
-/* Logo styles */
 .logo {
   display: flex;
   align-items: center;
   justify-content: center;
   margin-bottom: 20px;
-  /* width: 35%; */
 }
 
 .logo img {
-  width: 40px; /* Reduced size for logo icon */
+  width: 40px; 
   height: 40px;
   margin-right: 10px;
 }
 
-/* Search container styles */
+
 .search-container {
   display: flex;
   align-items: center;
@@ -66,17 +64,15 @@ body {
   align-items: center;
   flex-wrap: nowrap;
   gap: 20px; 
-  /* justify-content: center; */
-  width: 100%;
-
+  max-width: 1200px;
 }
 
-/* Recipe card base styles (mobile) */
+
 .recipe-card {
   background: white;                                   
   border-radius: 12px;                                  
   overflow: hidden;                                     
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* New: add depth */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease; /* the Hover Function! */
   display: flex;
   flex-direction: column;                               
@@ -92,7 +88,7 @@ body {
 
 .recipe-image {
   width: 100%;
-  height: 200px;
+  height: 220px;
   object-fit: cover;
 } 
 
@@ -103,14 +99,14 @@ body {
   text-align: left;                                     
 }
 
-/* Recipe title */
+
 .recipe-title {
   font-size: 24px;
   font-weight: bold;
   margin: 0;
 }
 
-/* Recipe description */
+
 .recipe-description {
   font-size: 16px;
   line-height: 1.5;
@@ -129,48 +125,47 @@ body {
 /* Footer base styles (mobile) */
 footer {
   margin-top: 40px;
-  padding: 40px 20px; /* Increased padding */
-  border-top: 2px solid #ddd; /* Slightly bolder border for visibility */
-  background-color: #f9f9f9; /* Subtle background color for differentiation */
+  padding: 40px 20px; 
+  border-top: 2px solid #ddd; 
+  background-color: #f9f9f9; 
   text-align: center;
   display: flex;
   flex-direction: column;
-  flex-wrap: wrap; /* Allow wrapping for small screens */
+  flex-wrap: wrap; 
   align-items: center;
   gap: 20px;
 }
 
 .footer-content {
-  min-width: 200px; /* Ensure content doesn’t shrink too much */
-  max-width: 600px;
+  min-width: 200px; 
+  max-width: 800px;
 }
 
 .social {
   display: flex;
   justify-content: center;
   align-items: center;
-  /* width: 20%; */
   width: auto;
   gap: 10px;
 }
 
 .social a {
   display: inline-block;
-  width: 30px; /* Larger clickable area */
+  width: 30px; 
   height: 40px;
-  background-color: white; /* Placeholder color */
+  background-color: white;
   border-radius: 50%; /* Circular icons */
   display: flex;
   justify-content: center;
   align-items: center;
   text-decoration: none;
-  color: #333; /* Icon color */
-  font-size: 18px; /* Icon size */
+  color: #333; 
+  font-size: 18px; 
   transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 .social a:hover {
-  background-color: #555; /* Darker background on hover */
+  background-color: #555;
   color: white;
   transform: scale(1.1); /* Slight zoom effect */
 }
@@ -180,8 +175,8 @@ footer {
   height: 20px;
 }
 
-/* Medium screens (tablets) */
-/* @media screen and (min-width: 600px) {
+/* Medium screens (tablets/smartphone sizes) */
+@media screen and (min-width: 600px) {
   .recipes-container {
     flex-direction: row; 
     flex-wrap: wrap; 
@@ -214,12 +209,17 @@ footer {
     max-width: 80%;
     margin: 20px auto;
   }
-} */
+}
 
 /* Large screens (desktop) */
 @media screen and (min-width: 960px) {
   body {
     max-width: 960px; 
+    margin: 0 auto;
+  }
+
+  .search-container {
+    max-width: 650px;
     margin: 0 auto;
   }
 
@@ -250,36 +250,5 @@ footer {
     line-height: 1.8;
   }
 
-  .search-container {
-    max-width: 600px;
-    margin: 0 auto;
-  }
+  
 }
-
-/* @media screen and (min-width: 1100px) {
-  body {
-    max-width: 1200px;
-    padding: 40px;
-  }
-
-  .recipes-container {
-    gap: 30px;
-  }
-
-  .recipe-card {
-    max-width: 800px;
-    margin: 20px auto;
-  }
-
-  .recipe-title {
-    font-size: 28px;
-  }
-
-  .recipe-description {
-    font-size: 18px;
-  }
-
-  footer {
-    padding: 30px 0;
-  }
-}  */
