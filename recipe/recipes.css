@@ -176,7 +176,12 @@ footer {
 }
 
 /* Medium screens (tablets/smartphone sizes) */
-@media screen and (min-width: 600px) {
+/* @media screen and (min-width: 600px) {
+  body {
+    max-width: 600px; 
+    margin: 0 auto;
+  }
+
   .recipes-container {
     flex-direction: row; 
     flex-wrap: wrap; 
@@ -209,7 +214,7 @@ footer {
     max-width: 80%;
     margin: 20px auto;
   }
-}
+} */
 
 /* Large screens (desktop) */
 @media screen and (min-width: 960px) {
