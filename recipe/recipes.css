@@ -176,7 +176,7 @@ footer {
 }
 
 /* Medium screens (tablets/smartphone sizes) */
-/* @media screen and (min-width: 600px) {
+@media screen and (min-width: 600px) {
   body {
     max-width: 600px; 
     margin: 0 auto;
@@ -214,7 +214,7 @@ footer {
     max-width: 80%;
     margin: 20px auto;
   }
-} */
+}
 
 /* Large screens (desktop) */
 @media screen and (min-width: 960px) {
@@ -253,6 +253,10 @@ footer {
   .recipe-description {
     font-size: 16px;
     line-height: 1.8;
+  }
+
+  .footer-content {
+    margin: 0 auto;
   }
 
   
