@@ -5,16 +5,16 @@ document.addEventListener("DOMContentLoaded", function () {
   const searchButton = document.querySelector('.search-button');
   const searchInput = document.querySelector('.search-input');
 
-  // Generate a random number >= 0 and < num
+  // Creates a random number >= 0 and < num using the attached functions (and methods like floor)
   const random = (num) => Math.floor(Math.random() * num);
 
-  // Get a random entry from a list
+  // Edit Note: Makes a random recipe displayed by default when loading the webpage.
   const getRandomListEntry = (list) => list[random(list.length)];
 
-  // Generate HTML for tags
+  // Assembles and joins my tags from the query on my recipes pulled from mjs
   const tagsTemplate = (tags) => tags.map(tag => `<li>${tag}</li>`).join('');
 
-  // Generate HTML for rating stars
+  // Created from previous func made to display the ratings.
   const ratingTemplate = (rating) => {
     let html = `<span class="rating" role="img" aria-label="Rating: ${rating} out of 5 stars">`;
     for (let i = 0; i < 5; i++) {
@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", function () {
     return html;
   };
 
-  // Generate the full recipe HTML
+  // Utilizes my recipes-container and generates a scalable recipe card for each recipe when the webpage is loaded.
   const recipeTemplate = (recipe) => `
     <figure class="recipe-card">
       <img class="recipe-image" src="${recipe.image}" alt="Image of ${recipe.name}" />
@@ -36,26 +36,27 @@ document.addEventListener("DOMContentLoaded", function () {
       </figcaption>
     </figure>`;
 
-  // Render recipes in the container
+  // Renders recipes in the Recipe Container
   const renderRecipes = (recipeList) => {
     recipesContainer.innerHTML = recipeList.map(recipe => recipeTemplate(recipe)).join('');
   };
 
-  // Initialize the page with a random recipe
+  // From the Site Code, using it as apart of the core components
   const init = () => {
     const randomRecipe = getRandomListEntry(recipes);
     renderRecipes([randomRecipe]);
   };
 
-  // Filter recipes based on a search query
+  // Filters recipes based on a search query (safety quip for this week from the reading!)
   const filterRecipes = (query) => recipes.filter(recipe =>
     recipe.name.toLowerCase().includes(query) ||
     recipe.description.toLowerCase().includes(query) ||
     recipe.tags.some(tag => tag.toLowerCase().includes(query)) ||
-    recipe.ingredients.some(ingredient => ingredient.toLowerCase().includes(query))
+    (recipe.recipeIngredient && recipe.recipeIngredient.some(ingredient => ingredient.toLowerCase().includes(query)))
+    // Edit Note: This is finally inclusive to all recipes, the way that I had it written beforehand was crappy coding and was too limited for the querying when filtering. 
   ).sort((a, b) => a.name.localeCompare(b.name));
 
-  // Handle search functionality
+  // This will handle all of my search(es) ensuring that they are case sensitive and match the conditions set within the search bar for all queries.
   const searchHandler = (event) => {
     event.preventDefault();
     const query = searchInput.value.toLowerCase().trim();
@@ -63,10 +64,9 @@ document.addEventListener("DOMContentLoaded", function () {
     renderRecipes(filteredRecipes);
   };
 
-  // Attach event listeners
+  // Attaches my 'clicks' as an eventListener for the Search Button
   searchButton.addEventListener('click', searchHandler);
 
-  // Initialize the page
+  // Pulls init as intended from the course reading that we did in class.
   init();
 });
-
