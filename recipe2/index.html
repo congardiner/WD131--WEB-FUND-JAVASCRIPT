@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RecipeBook</title>
+    
+    <!-- Social Media Meta Tags -->
+    <meta property="og:title" content="RecipeBook - Delicious Recipes">
+    <meta property="og:type" content="website"/>
+    <meta property="og:description" content="Discover delicious recipes including our famous Apple Crisp dessert amongst others catered to delivering homestyle, comfort food directly to you.">
+    <meta property="og:image" content="https://recipebook.com/pics/recipe-preview.jpg">
+    <meta property="og:url" content="https://recipebook.com">
+    <meta name="twitter:card" content="summary_large_image">
+    
+    <!-- Favicon is now working correctly -->
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="icon" href="favicon.png" type="image/png">
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+
+    <link rel="stylesheet" href="recipes.css">
+    <script src="main.js" type="module" defer></script></script>
+    <!-- Edit note: included type="module" as I hadn't even included my mjs file beforehand -->
+  </head>
+
+
+  <body>
+    <header>
+      <div class="logo">
+        <img src="pics/recipe-book.png" alt="Recipe book icon">
+        <h1>RecipeBook</h1>
+      </div>
+      <div class="search-container">
+        <input type="text" placeholder="Find a recipe" class="search-input">
+        <button class="search-button">
+          <img src="pics/search.svg" alt="Search">
+        </button>
+      </div>
+    </header>
+
+
+    <main>
+
+      <div class="recipes-container">
+        <!-- I had mis-spelled my recipes-container as card in my autocorrect and as a result this was my dumbfounded error that I had. -->
+        <!-- My understanding is my recipes should be inserted here according to the search func allocated by the user?  -->
+      </div>
+
+    
+    </main>
+
+
+    <footer>
+
+      <div class="footer-content">
+        <!-- Attribution for recipe icon -->
+        <p class="attribution">
+            <a href="https://www.flaticon.com/free-icons/recipe" 
+               title="recipe icons" 
+               class="attribution-link">
+                Recipe icons created by Freepik - Flaticon
+            </a>
+            <p>
+              <p>&copy; 2024 Recipe Site. All Rights Reserved.
+
+              </p>
+        </p>
+        
+        <div class="social">
+            <!-- Social media icons provided under CC from https://www.iconfinder.com/AlfredoCreates  -->
+            <a href="#"><img src="pics/instagram_icon.svg" alt="instagram icon"></a>
+            <a href="#"><img src="pics/youtube_icon.svg" alt="youtube icon"></a>
+            <!-- I've tried multiple variations of inserting favicons, and somehow they aren't linking right? -->
+            <a href="#"><img src="pics/pinterest_icon.svg" alt="pinterest icon"></a>
+        </div>
+    </div>
+
+    </footer>
+  </body>
+</html>
