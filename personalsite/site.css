@@ -18,11 +18,11 @@ body {
 }
 
 /* Header Styles */
-header {
+/* header {
   background-color: #fff;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   padding: 20px;
-}
+} */
 
 .header {
   display: flex;
@@ -31,6 +31,8 @@ header {
   max-width: 1300px;
   margin: 0 auto;
   background-color: var(--accent2-color);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 20px;
 }
 
 .logo-and-nav {
@@ -87,6 +89,30 @@ nav ul li a {
 
 .search-button img {
   height: 16px;
+}
+
+/* Privacy Section */
+
+.privacy-section {
+  background-color: #fff;
+  padding: 40px 20px;
+  margin: 30px auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  max-width: 800px;
+}
+
+.privacy-section h1 {
+  font-size: 28px;
+  margin-bottom: 20px;
+  color: var(--primary-color);
+}
+
+.privacy-section p {
+  font-size: 16px;
+  line-height: 1.8;
+  margin-bottom: 20px;
 }
 
 
