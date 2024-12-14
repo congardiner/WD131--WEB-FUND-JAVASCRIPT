@@ -1,13 +1,12 @@
-@import url("https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Orbitron:wght@400..900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Rock+Salt&display=swap');
 
-/* include my root styling here to compensate for concurrently implementing all of my desired changes into the site. 
- */
+/* include my root styling here to compensate for concurrently implementing all of my desired changes into the site.  */
 
 :root {
-  --primary-color: #8DB890;
+  --primary-color: #98E2C6;
   --secondary-color: white;
   --accent1-color: black;
-  --accent2-color: #DFDCD1;
+  --accent2-color: #dfdcd1;
 }
 
 body {
@@ -15,40 +14,44 @@ body {
   margin: 0 auto;
   padding: 4em;
   font-size: 18px;
+  font-family: 'Inter', 'Montserrat';
 }
 
-/* Header Styles */
-/* header {
-  background-color: #fff;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  padding: 20px;
-} */
+.nav-links {
+  font-family: 'Montserrat', sans-serif;
+}
+
 
 .header {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
-  max-width: 1300px;
+  max-width: 1350px;
   margin: 0 auto;
-  background-color: var(--accent2-color);
+  background-color: #98E2C6;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   padding: 20px;
+  border-radius: 20px;
+  margin-bottom: auto;
+  flex-wrap: wrap; /* Allow wrapping for smaller screens */
 }
 
-.logo-and-nav {
-  display: flex;
-  align-items: center;
+.rock-salt {
+  font-family: "Rock Salt", cursive;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 2.2em;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.rock-salt:hover{
+  transform: scale(1.1);
 }
 
 .logo {
-  display: flex;
-  align-items: center;
-  margin-right: 20px;
-}
-
-.logo img {
-  height: 320px;
-  margin-right: 10px;
+  height: 150px;
+  margin-right: 15px; /* Space between the logo and the heading */
+  border-radius: 20px;
 }
 
 nav ul {
@@ -58,37 +61,115 @@ nav ul {
 
 nav ul li {
   margin-right: 20px;
+  transition: transform 0.3s ease, color 0.3s ease;
 }
 
 nav ul li a {
   color: #333;
   text-decoration: none;
+  transition: color 0.3s ease;
 }
 
-.search-container {
+nav ul li:hover {
+  transform: scale(1.1); 
+}
+
+
+.rounded-button {
+  background-color: #ffc107; 
+  color: #000; 
+  padding: 10px 20px; 
+  border-radius: 5px; 
+  border: none; 
+  font-size: 16px;
+  cursor: pointer; 
+  text-align: center; 
+  text-decoration: none; 
+  display: inline-block; 
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.rounded-button:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* This is where I will place my quotes container */
+
+/* .quotes-container {} */
+
+.quotes-container {
+  background-color: #fff;
+  padding: 40px 20px;
+  margin: 30px auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 900px;
+  text-align: center;
   display: flex;
+  flex-direction: column;
   align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.search-input {
-  padding: 8px 12px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  font-size: 14px;
-  margin-right: 10px;
+.quotes-container:hover {
+  transform: scale(1.06);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-.search-button {
-  background-color: white;
-  color: #fff;
+.quotes-container blockquote {
+  font-size: 32px;
+  font-style: italic;
+  margin-top: 15px;
+  margin-bottom: 30px;
+  color: #555;
+}
+
+.quotes-container footer {
+  font-size: 18px;
+  font-weight: bold;
+  color: white;
+  transition: transform 0.3s ease;
+}
+
+.quotes-container footer:hover {
+  transform: scale(1.05); 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.center-container {
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  flex-direction: row; /* Stack elements vertically */
+  margin-bottom: 40px;
+}
+
+
+.next-quote-button {
+  background-color: #ffc107;
+  color: black;
+  padding: 10px 20px;
   border: none;
-  padding: 8px 12px;
-  border-radius: 4px;
+  border-radius: 5px;
   cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin: 0 20px;
+  font-size: 24px;
 }
 
-.search-button img {
-  height: 16px;
+.next-quote-button:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.filter-input {
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  margin: 0 20px;
+  font-size: 20px;
 }
 
 /* Privacy Section */
@@ -101,25 +182,41 @@ nav ul li a {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   max-width: 800px;
+  border: 4px solid #000;
+}
+
+.privacy-section:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .privacy-section h1 {
-  font-size: 28px;
+  font-size: 32px;
   margin-bottom: 20px;
-  color: var(--primary-color);
+  color: black;
+  font-family: "Rock Salt", cursive;
 }
 
 .privacy-section p {
-  font-size: 16px;
+  font-size: 20px;
   line-height: 1.8;
   margin-bottom: 20px;
 }
-
 
 /* Hero section styles */
 .hero {
   padding: 100px 20px;
   text-align: center;
+  background-color:black;
+  border-radius: 20px;
+  margin-top: 45px;
+  margin-bottom: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hero:hover {
+  transform: scale(1.05); 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .hero h1 {
@@ -128,17 +225,17 @@ nav ul li a {
 }
 
 .gradient-text-hero {
-    font-size: 36px;
-    font-weight: bold;
-    background: linear-gradient(to right, var(--primary-color), #33ccff);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-  }
-
+  font-size: 36px;
+  font-weight: bold;
+  background: linear-gradient(to right, #ffc857, #33ccff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
 
 .hero p {
-  font-size: 18px;
+  font-size: 24px;
   margin-bottom: 40px;
+  color: white;
 }
 
 .get-commit-button {
@@ -147,10 +244,203 @@ nav ul li a {
   padding: 10px 20px;
   border-radius: 5px;
   border: none;
-  font-size: 16px;
+  font-size: 20px;
   cursor: pointer;
+  text-decoration: none; /* Remove underline from link */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+.get-commit-button:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Hero 2 - Motivational Quote Page */
+
+.hero-2 {
+  background-color: black;
+  color: var(--secondary-color);
+  padding: 60px 20px;
+  text-align: center; /* Center-align text */
+  border-radius: 10px; /* Rounded corners */
+  margin: 40px auto;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 1200px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hero-2:hover {
+  transform: scale(1.02); /* Slightly increase the size on hover */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Add a shadow on hover */
+}
+
+.hero-2 h1 {
+  font-size: 48px;
+  color: #FFD700;
+}
+
+.hero-2 p {
+  font-size: 24px; /* Font size for the paragraph */
+  margin-bottom: 40px; /* Space below the paragraph */
+  color: white; /* Text color */
+}
+
+/* Quotes Explain Section */
+.quotes-explain {
+  background-color: #98E2C6; 
+  color: #333; 
+  padding: 20px; 
+  border-radius: 10px; 
+  margin: 40px auto; 
+  max-width: 900px; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin-bottom: 50px;
+}
+
+.quotes-explain:hover {
+  transform: scale(1.02);
+}
+
+.quotes-explain h2 {
+  text-align: center;
+  font-family: "Rock Salt", cursive;
+}
+
+.quotes-explain p {
+  font-size: 20px; 
+  line-height: 1.6; 
+  margin-bottom: 20px; 
+  margin: 0 auto;
+}
+
+
+
+/* About Section */
+.about-section {
+  background-color: #98E2C6; 
+  padding: 20px 20px; 
+  margin: 20px auto; 
+  border-radius: 10px; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  max-width: 1200px; /* Maximum width of the container */
+  text-align: center; /* Center-align text */
+  transition: 0.3s ease, box-shadow 0.3s ease;
+  margin-top: 40px;
+  margin-bottom: 50px;
+}
+
+.about-section:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.about-content h2 {
+  font-size: 40px;
+  margin-bottom: 20px;
+  color: black; 
+  font-family: "Rock Salt", cursive;;
+  border-bottom: 4px solid #333;
+  display: inline-block;
+}
+
+.intro-section {
+  background-color: #f8f8f8; 
+  color: #333; 
+  padding: 20px; 
+  border-radius: 10px; 
+  margin: 40px auto;
+  max-width: 800px; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.intro-section p {
+  font-size: 22px; /* Increase font size for readability */
+  line-height: 1.6; /* Increase line height for better spacing */
+  margin-bottom: 20px; /* Add space between paragraphs */
+  text-align: left;
+}
+
+.intro-section em {
+  font-style: italic;
+  color: #555; /* Slightly lighter color for emphasis */
+}
+
+
+/* My Marquee Implemention that I've been testing */
+
+.possible {
+  transition: 0.3s ease, box-shadow 0.3s ease;
+}
+
+.possible:hover {
+  transform: scale(1.05);
+}
+
+.running-banner {
+  width: 70%;
+  margin: 0 auto;
+  overflow: hidden;
+  background-color: black; /* Background color for the banner */
+  color: white; /* Text color for the banner */
+  padding: 10px 0; /* Padding inside the banner */
+  position: relative;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  border-radius: 10px;
+}
+
+.running-banner span {
+  display: inline-block;
+  white-space: nowrap;
+  padding-left: 100%; /* Start the text off-screen */
+  animation: marquee 35s linear infinite; /* Animation for the running text */
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0); /* Start position */
+  }
+  100% {
+    transform: translateX(-100%); /* End position */
+  }
+}
+
+.possible-2{
+  transition: 0.3s ease, box-shadow 0.3s ease;
+  text-align: right;
+}
+
+.possible-2:hover {
+  transform: scale(1.05);
+}
+
+/* Content for my Image(s) */
+
+.image-section {
+  background-color: #f8f8f8; 
+  padding: 10px 10px; 
+  margin: 20px auto; /* Center the container with auto margins */
+  margin-top: 55px;
+  margin-bottom: 50px;
+  border-radius: 10px; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+  max-width: 1100px; 
+  text-align: center; 
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.image-section:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.styled-image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+  margin: 20px 0; 
+}
 
 /* Motivation Content Section */
 
@@ -210,71 +500,13 @@ nav ul li a {
   margin: 20px 0; /* Add margin for spacing */
 }
 
-/* .motivation-image img {
-  max-width: 80%;
-  height: 250px;;
-} */
-
-
-
-
-/* FAQ Section */
-
-.faq-section {
-  background-color: var(--accent2-color);
-  color: black;
-  padding: 60px 20px;
-  margin-bottom: 40px;
-  border-radius: 10px;
-}
-
-.faq-title {
-  text-align: center;
-  font-size: 32px;
-  margin-bottom: 40px;
-}
-
-.faq-container {
-  max-width: 800px;
-  margin: 0 auto;
-}
-
-.faq-item {
-  border-bottom: 1px solid #333;
-  padding: 20px 0;
-}
-
-.faq-question {
-  font-size: 18px;
-  font-weight: bold;
-  cursor: pointer;
-  position: relative;
-  padding-right: 30px;
-}
-
-.faq-question:after {
-  content: "+";
-  position: absolute;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
-  font-size: 24px;
-}
-
-.faq-answer {
-  margin-top: 10px;
-  display: none;
-}
-
-
-
-
 /* My Footer Styling */
 
 footer {
   background-color: #000;
   color: #fff;
   padding: 40px 20px;
+  border-radius: 20px;
 }
 
 .footer-container {
@@ -292,6 +524,7 @@ footer {
 .company-links h3 {
   font-size: 18px;
   margin-bottom: 20px;
+  color: #98E2C6;
 }
 
 .company-links ul {
@@ -308,53 +541,41 @@ footer {
   text-decoration: none;
 }
 
-.subscribe-section {
-  flex: 1;
-  text-align: right;
-}
-
-.subscribe-section h3 {
-  font-size: 18px;
-  margin-bottom: 20px;
-}
-
-.subscribe-input-container {
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-}
-
-.subscribe-input {
-  padding: 10px 15px;
-  border: none;
-  border-radius: 4px 0 0 4px;
-  font-size: 16px;
-  width: 60%;
-}
-
-.subscribe-button {
-  background-color: #ffc107;
-  color: #000;
-  border: none;
-  padding: 10px 20px;
-  border-radius: 0 4px 4px 0;
-  font-size: 16px;
-  cursor: pointer;
-}
-
-
-
-
-
 /* Responsive Design */
 
 /* Mobile Styles (Default) */
-@media (max-width: 600px) {
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    align-items: center;
+    padding: 14px;
+  }
+
+  .rounded-button {
+    padding: 8px 16px; /* Adjust padding for smaller screens */
+    font-size: 14px; /* Adjust font size for smaller screens */
+  }
+
+}
+
+@media (max-width: 1024px) {
+
+
+  .logo {
+    margin-top: 15px;
+    margin-bottom: 20px;
+  }
+
+  .rounded-button {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+
 }
 
 /* Tablet Styles */
-@media (min-width: 601px) and (max-width: 1024px) {
-
+/* @media (min-width: 601px) and (max-width: 1024px) {
   /* .motivation {
     flex-direction: row; 
     justify-content: space-between;
@@ -364,10 +585,7 @@ footer {
   .motivation-content {
     text-align: left;
   } */
-}
 
 /* Desktop Styles */
 @media (min-width: 1025px) {
-
-  
 }
