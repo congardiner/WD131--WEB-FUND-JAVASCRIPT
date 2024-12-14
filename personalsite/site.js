@@ -1,22 +1,6 @@
 import motivation from "./site.mjs";
 
 document.addEventListener("DOMContentLoaded", function () {
-  // This was used to test against websocket usage as it was messing up my web performance.
-  if (window.location.pathname === "/some-specific-page") {
-    socket = new WebSocket("ws://example.com/socket");
-
-    socket.onopen = function () {
-      console.log("WebSocket connection established");
-    };
-
-    socket.onmessage = function (event) {
-      console.log("Message from server ", event.data);
-    };
-
-    socket.onclose = function () {
-      console.log("WebSocket connection closed");
-    };
-  }
 
   // Quotes functionality
   const quotesContainer = document.querySelector(".quotes-container");
@@ -85,5 +69,5 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Display a random quote on page load
   displayRandomQuote();
-    
+
 });
